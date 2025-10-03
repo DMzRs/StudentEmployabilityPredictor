@@ -92,7 +92,7 @@ if st.button("Predict"):
         prediction = model.predict(X_new_scaled)[0]
 
         # Map prediction to label
-        label_map = {0: "Less Employable", 1: "Employable"}
+        label_map = {0: "Less Employable :(", 1: "Employable :)"}
         prediction_label = label_map.get(prediction, "Unknown")
 
         st.success(f"Prediction: You are **{prediction_label}**")
