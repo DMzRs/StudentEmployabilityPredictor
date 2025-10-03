@@ -80,7 +80,7 @@ for display_name, key_name in criteria.items():
 # ------------------------------
 if st.button("Predict"):
     if None in user_inputs.values():
-        st.warning("⚠️ Please rate all criteria before predicting.")
+        st.warning("Please rate all criteria before predicting.")
     else:
         # Convert inputs into DataFrame with correct column names & order
         X_new_df = pd.DataFrame([user_inputs], columns=columns)
@@ -95,4 +95,4 @@ if st.button("Predict"):
         label_map = {0: "Less Employable", 1: "Employable"}
         prediction_label = label_map.get(prediction, "Unknown")
 
-        st.success(f"🎯 Prediction: {prediction} → **{prediction_label}**")
+        st.success(f"Prediction: You are **{prediction_label}**")
